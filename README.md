@@ -72,6 +72,7 @@ ollama serve
 Despues en la extension, indicar la IP suigiente y probar la conneccion con Ollama:
 ```bash
 ip route show # Tomar la IP de la gateway
+# A veces es http://10.0.2.2:11434
 ```
 
 ## Uso
