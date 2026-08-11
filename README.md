@@ -61,6 +61,19 @@ gradle shadowJar
 Esto genera `build/libs/burp-ai-assistant-0.1.0.jar`. En Burp: **Extensions -> Installed -> Add**,
 selecciona el jar, tipo `Java`.
 
+## Uso en una VM con Ollama en el host (Windows)
+
+Ollama debe escuchar en todos interfaces:
+```powershell
+$env:OLLAMA_HOST="0.0.0.0:11434"
+ollama serve
+```
+
+Despues en la extension, indicar la IP suigiente y probar la conneccion con Ollama:
+```bash
+ip route show # Tomar la IP de la gateway
+```
+
 ## Uso
 
 1. En Repeater/Proxy, sobre la solicitud que te parece rara: click derecho -> **"Analizar con AI Assistant"**.
